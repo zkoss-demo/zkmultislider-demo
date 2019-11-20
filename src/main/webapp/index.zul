@@ -1,0 +1,25 @@
+<zk>
+    <vlayout>
+        <multislider id="m1">
+            <sliderbuttons startValue="10" endValue="70"/>
+            <sliderbuttons startValue="25" endValue="55"/>
+        </multislider>
+        <multislider id="m2">
+            <sliderbuttons startValue="13" endValue="83"/>
+            <sliderbuttons startValue="24" endValue="72"/>
+            <sliderbuttons startValue="36" endValue="61"/>
+        </multislider>
+    </vlayout>
+    <zscript><![CDATA[
+        import java.util.Map;
+        import java.util.HashMap;
+        Map marksInfo = new HashMap();
+        marksInfo.put(0, "0%");
+        marksInfo.put(20, "20%");
+        marksInfo.put(50, "50%");
+        marksInfo.put(80, "80%");
+        marksInfo.put(100, "100%");
+        m2.setMarkScale(0);
+        m2.setMarks(marksInfo);
+    ]]></zscript>
+</zk>
